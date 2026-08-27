@@ -19,7 +19,8 @@
   <img alt="Users" src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fpulse.vverbski.dev%2Fstats&query=%24.users&label=users&style=flat-square&color=22222a&labelColor=0b0b0d">
 </p>
 
-<p align="center"><sub>Live figures, read straight from my telemetry service. Revenue is net of costs and may go negative.</sub></p>
+<p align="center"><sub>Live figures, read straight from my telemetry service. Revenue is net of costs and may go negative;
+<em>users</em> counts people who actually used a tool, not people who installed it.</sub></p>
 
 ---
 
@@ -42,9 +43,14 @@ one job, done well enough that somebody pays for it.
 
 | | Project | One feature | Status |
 | --- | --- | --- | --- |
-| **01** | [Change Google Logo](https://vverbski.dev/projects/change-google-logo/) | Swaps the Google logo for your own image — every country domain, entirely on your device | Building |
+| **01** | [Change Google Logo](https://chromewebstore.google.com/detail/change-google-logo/jfgcjabfoigcamepddiolpdcpkellmij) | Swaps the Google logo for your own image — every country domain, entirely on your device | **Live** · [the story](https://vverbski.dev/projects/change-google-logo/) |
 | **02** | Coming soon | Not announced yet — the idea has to prove demand in search before it gets built | Planned |
 | **03** | Coming soon | The one after that | Planned |
+
+<p>
+  <a href="https://chromewebstore.google.com/detail/change-google-logo/jfgcjabfoigcamepddiolpdcpkellmij"><img alt="Chrome Web Store version" src="https://img.shields.io/chrome-web-store/v/jfgcjabfoigcamepddiolpdcpkellmij?label=change%20google%20logo&style=flat-square&color=22222a&labelColor=0b0b0d"></a>
+  <a href="https://chromewebstore.google.com/detail/change-google-logo/jfgcjabfoigcamepddiolpdcpkellmij"><img alt="Chrome Web Store installs" src="https://img.shields.io/chrome-web-store/users/jfgcjabfoigcamepddiolpdcpkellmij?label=installs&style=flat-square&color=22222a&labelColor=0b0b0d"></a>
+</p>
 
 ### Elsewhere
 
