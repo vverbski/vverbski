@@ -29,7 +29,7 @@
 ## Projects
 
 <a href="https://chromewebstore.google.com/detail/change-google-logo/jfgcjabfoigcamepddiolpdcpkellmij">
-  <img alt="Change Google Logo — your logo on the Google homepage, one click, every country domain" src="https://raw.githubusercontent.com/vverbski/vverbski/main/assets/change-google-logo.png" width="100%">
+  <img alt="Change Google Logo — your logo on the Google homepage, one click, every country domain" src="https://raw.githubusercontent.com/vverbski/vverbski/main/assets/change-google-logo.png?v=2" width="100%">
 </a>
 
 | | Project | The one feature | Status |
