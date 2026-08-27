@@ -1,0 +1,11 @@
+{
+  "name": "vverbski-profile",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "banner": "node scripts/gen-banner.mjs"
+  },
+  "devDependencies": {
+    "sharp": "^0.35.3"
+  }
+}
