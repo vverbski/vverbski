@@ -14,23 +14,14 @@
   <a href="https://vverbski.dev/ru/">по-русски</a>
 </p>
 
-<p align="center">
-  <img alt="Net revenue" src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fpulse.vverbski.dev%2Fstats&query=%24.revenue&prefix=%24&label=net%20revenue&style=flat-square&color=22222a&labelColor=0b0b0d">
-  <img alt="Projects launched" src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fpulse.vverbski.dev%2Fstats&query=%24.projectsLaunched&label=launched&style=flat-square&color=22222a&labelColor=0b0b0d">
-  <img alt="In progress" src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fpulse.vverbski.dev%2Fstats&query=%24.projectsInProgress&label=building&style=flat-square&color=22222a&labelColor=0b0b0d">
-  <img alt="Users" src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fpulse.vverbski.dev%2Fstats&query=%24.users&label=users&style=flat-square&color=22222a&labelColor=0b0b0d">
-</p>
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/vverbski/vverbski/main/assets/stats-dark.png">
+  <img alt="Net revenue $0 · projects launched 1 · building 0 · users 7" src="https://raw.githubusercontent.com/vverbski/vverbski/main/assets/stats-light.png" width="100%">
+</picture>
 
-<p align="center">
-  <sub>Live, straight from my own telemetry. Revenue is net of costs and may go negative;<br>
-  <em>users</em> counts people who actually used a tool, not people who installed it.</sub>
-</p>
+<p align="center"><sub><sub>Live from my own telemetry · revenue is net of costs · <em>users</em> are people who used a tool, not installs</sub></sub></p>
 
 ## Projects
-
-<a href="https://chromewebstore.google.com/detail/change-google-logo/jfgcjabfoigcamepddiolpdcpkellmij">
-  <img alt="Change Google Logo — your logo on the Google homepage, one click, every country domain" src="https://raw.githubusercontent.com/vverbski/vverbski/main/assets/change-google-logo.png" width="100%">
-</a>
 
 | | Project | The one feature | Status |
 | --- | --- | --- | --- |

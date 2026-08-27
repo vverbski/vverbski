@@ -1,0 +1,38 @@
+# Re-renders the numbers card from pulse and commits it when a figure moves.
+# GitHub will not run scripts inside a README, so the alternative to this is a
+# stale screenshot or a row of badge chips.
+name: Stats
+
+on:
+  schedule:
+    - cron: '17 */6 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      # The runner has neither Arial nor Menlo. These are their metric-compatible
+      # twins, so a card rendered here lines up with a banner rendered on a Mac.
+      - run: sudo apt-get update && sudo apt-get install -y fonts-liberation fonts-dejavu-core
+      - run: npm ci
+      - run: npm run assets
+      - name: Commit if the numbers moved
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add assets
+          if git diff --cached --quiet; then
+            echo 'numbers unchanged'
+            exit 0
+          fi
+          git commit -m 'Refresh the numbers [skip ci]'
+          git push
