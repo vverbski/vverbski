@@ -1,8 +1,8 @@
-// Renders the profile banner in both themes. GitHub swaps them with <picture>,
+// Renders the profile's raster assets: the banner in both themes, and the avatar. GitHub swaps them with <picture>,
 // so the header follows the reader's theme instead of fighting it.
 // Text is rasterised here rather than shipped as SVG: an <img> SVG would pick
 // up whatever fonts the reader's machine has and the spacing would drift.
-// Run `npm run banner` and commit the PNGs — nothing regenerates them in CI.
+// Run `npm run assets` and commit the PNGs — nothing regenerates them in CI.
 import { fileURLToPath } from 'node:url';
 import path from 'node:path';
 import sharp from 'sharp';
@@ -56,3 +56,21 @@ for (const [name, t] of Object.entries(themes)) {
   await sharp(Buffer.from(banner(t))).png({ compressionLevel: 9 }).toFile(file);
   console.log('wrote assets/banner-' + name + '.png');
 }
+
+/** Avatar. GitHub crops it to a circle, so the plate is a full square and the
+ *  monogram — the same one the site uses as its favicon — stays well inside. */
+function avatar(size, t) {
+  const s = size / 32;
+  return `<svg xmlns="http://www.w3.org/2000/svg" width="${size}" height="${size}" viewBox="0 0 ${size} ${size}">
+  <rect width="${size}" height="${size}" fill="${t.bg}"/>
+  <g fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="${2.7 * s}">
+    <path d="M${6.4 * s} ${9.6 * s}L${12 * s} ${22.6 * s}L${17.6 * s} ${9.6 * s}" stroke="${t.ink}"/>
+    <path d="M${20.6 * s} ${9.6 * s}L${26.2 * s} ${22.6 * s}" stroke="${t.faint}"/>
+  </g>
+</svg>`;
+}
+
+await sharp(Buffer.from(avatar(512, themes.dark)))
+  .png({ compressionLevel: 9 })
+  .toFile(path.join(root, 'assets', 'avatar.png'));
+console.log('wrote assets/avatar.png');
